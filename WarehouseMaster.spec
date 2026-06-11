@@ -5,7 +5,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[('Inter.ttf', '.'), ('sheet_config.json', '.')],
+    datas=[('Inter.ttf', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
