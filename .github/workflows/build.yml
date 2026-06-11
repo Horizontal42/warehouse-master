@@ -15,32 +15,7 @@ permissions:
   contents: write
 
 jobs:
-  create-release:
-    runs-on: ubuntu-latest
-    outputs:
-      tag: ${{ steps.tag.outputs.value }}
-    steps:
-      - name: Resolve tag
-        id: tag
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "value=${{ inputs.tag }}" >> $GITHUB_OUTPUT
-          else
-            echo "value=${{ github.ref_name }}" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Ensure release exists
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh release view "${{ steps.tag.outputs.value }}" --repo "${{ github.repository }}" 2>/dev/null || \
-          gh release create "${{ steps.tag.outputs.value }}" \
-            --repo "${{ github.repository }}" \
-            --title "${{ steps.tag.outputs.value }}" \
-            --generate-notes
-
   build:
-    needs: create-release
     strategy:
       fail-fast: false
       matrix:
@@ -84,4 +59,9 @@ jobs:
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload "${{ needs.create-release.outputs.tag }}" "dist/${{ matrix.artifact }}" --clobber
+        run: |
+          TAG="${{ github.ref_name }}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TAG="${{ inputs.tag }}"
+          fi
+          gh release upload "$TAG" "dist/${{ matrix.artifact }}" --clobber
