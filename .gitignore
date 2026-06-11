@@ -1,0 +1,25 @@
+build/
+dist/
+__pycache__/
+*.exe
+*.pyc
+
+# secrets and private config — copy sheet_config.example.json and fill in
+sheet_config.json
+token.json
+credentials.json
+
+# internal/AI tool files
+ТЕст/
+.claude/
+CLAUDE.md
+*.md.bak
+elegant-sauteeing-axolotl.md
+.aider*
+bugs.md
+*_ai_notes*
+llm_context*
+
+# PyInstaller leftovers
+*.spec.bak
+LabelGenerator.spec

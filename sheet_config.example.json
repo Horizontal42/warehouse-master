@@ -1,0 +1,99 @@
+{
+  "worksheets": {
+    "laptops": "Ноутбуки шиндовс",
+    "parts": "Запчасти",
+    "ssd": "SSD/HDD",
+    "batteries": "АКБ"
+  },
+  "laptop_columns": {
+    "serial": 21,
+    "warehouse": 14,
+    "status": 15,
+    "category": 18,
+    "ssd": 36,
+    "battery_cycles": 37,
+    "battery_capacity": 38,
+    "parts": {
+      "A":          [55],
+      "A1":         [55],
+      "B":          [63],
+      "B2":         [63],
+      "B1":         [71],
+      "C1":         [79, 105],
+      "C2":         [88],
+      "D":          [96],
+      "Клавиатура": [105],
+      "Кнопки":     [113],
+      "Сенсор":     [119],
+      "Дисплей":    [126]
+    }
+  },
+  "clear_ranges": {
+    "A":          "BE:BJ",
+    "A1":         "BE:BJ",
+    "B":          "BM:BR",
+    "B2":         "BM:BR",
+    "B1":         "BU:BZ",
+    "C1":         "CC:CI",
+    "C2":         "CL:CQ",
+    "D":          "CT:CZ",
+    "Клавиатура": "DC:DH",
+    "Кнопки":     "DK:DN",
+    "Сенсор":     "DQ:DU",
+    "Дисплей":    "DX:EF"
+  },
+  "type_translator": {
+    "Кнопки трекпада":    "Кнопки",
+    "Сенсор трекпада":    "Сенсор",
+    "Дисплей":            "Дисплей",
+    "Клавиатура":         "Клавиатура",
+    "Веб-камера":         "Веб-камера",
+    "A":                  "A",
+    "A1":                 "A1",
+    "B":                  "B",
+    "B1":                 "B1",
+    "B2":                 "B2",
+    "D":                  "D",
+    "C1 (с клавой)":      "C1",
+    "C2 (без клавы)":     "C2",
+    "B - (IR)":           "B",
+    "B - (IR+Win Hello)": "B",
+    "B2 - (IR)":          "B2"
+  },
+  "sort_order": {
+    "A":   1,
+    "A1":  2,
+    "B":   3,
+    "B2":  4,
+    "B1":  5,
+    "C1":  6,
+    "C2":  7,
+    "D":   8,
+    "SSD": 200,
+    "АКБ": 201
+  },
+  "statuses": {
+    "shipped":          "Отгружен",
+    "in_stock_no":      "Нет",
+    "warehouse_value":  "Производство",
+    "assembled_status": "Собран, ждет пресейл"
+  },
+  "part_columns": {
+    "parts_availability": "B",
+    "parts_status":       "K",
+    "ssd_availability":   "B",
+    "ssd_status":         "E",
+    "battery_availability": "B",
+    "battery_status":     "J"
+  },
+  "parts_data_range":   "G:K",
+  "parts_data_fields":  { "type": 0, "grade": 2, "code": 3 },
+  "ssd_data_range":     "G:N",
+  "ssd_data_fields":    { "code": 0, "hours": 6, "cycles": 7 },
+  "battery_data_range": "I:L",
+  "battery_data_fields":{ "code": 0, "cycles": 2, "capacity": 3 },
+  "ssd_grade_thresholds": {
+    "a_max_hours": 1000,
+    "b_max_hours": 15000
+  }
+}
