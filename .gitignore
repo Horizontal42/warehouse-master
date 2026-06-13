@@ -9,16 +9,8 @@ sheet_config.json
 token.json
 credentials.json
 
-# internal/AI tool files
+# local dev scratch
 ТЕст/
-.claude/
-CLAUDE.md
-*.md.bak
-elegant-sauteeing-axolotl.md
-.aider*
-bugs.md
-*_ai_notes*
-llm_context*
 
 # PyInstaller leftovers
 *.spec.bak
