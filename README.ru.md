@@ -56,4 +56,4 @@ pyinstaller WarehouseMaster.spec
 
 ## Лицензия
 
-MIT
+[PolyForm Noncommercial License 1.0.0](LICENSE) — бесплатно для некоммерческого использования.
