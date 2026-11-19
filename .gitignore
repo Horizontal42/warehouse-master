@@ -6,12 +6,25 @@ __pycache__/
 
 # secrets and private config — copy sheet_config.example.json and fill in
 sheet_config.json
+service_key.json
 token.json
 credentials.json
+settings.ini
 
 # local dev scratch
-ТЕст/
+Тест/
 
 # PyInstaller leftovers
 *.spec.bak
 LabelGenerator.spec
+
+# internal and ai tool files
+.claude/
+.gemini/
+.aider*
+.cursorrules
+bugs.md
+*_ai_notes*
+llm_context*
+TASKS.md
+docs/superpowers/
